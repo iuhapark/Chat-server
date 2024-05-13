@@ -12,5 +12,6 @@ class Response(BaseModel):
 @router.post("/titanic")
 async def titanic(req:Request):
     print("Enter titanic")
-    print(req)
-    return Response(answer="100명이야")
+    hello = '/Users/juhapark/IdeaProjects/Kubernetes/chat-server/backend/app/api/titanic/data/hello.txt'
+    
+    return Response(answer="생존자는 100명이야")
