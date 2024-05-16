@@ -1,37 +1,34 @@
 from dataclasses import dataclass
-import sklearn
-
-#deprecated
-# @dataclass
-# class TitanicModel:
-#     def __init__(self):
-#         self.context = None  # java에서 클래스 만든 뒤 new instance한 것과 같음
-#         self.train = None
-#         self.test = None
-#         self.fname = ''
-#         self.id = 0
-#         self.label = 0
 
 @dataclass
-class TitanicModel:
-    context: str
-    fname: str
-    train: object
-    test: object
-    id: str
-    label: str
+class DataSets: 
+    _fname: str = '' # file name
+    _dname: str = '' # data path
+    _sname: str = '' # save path
+    _train: object = None
+    _test: object = None
+    _id: str = ''
+    _label: str = ''
     
-    @property
-    def context(self) -> str: return self._context
-
-    @context.setter
-    def context(self, context): self._context = context
+   
 
     @property
     def fname(self) -> str: return self._fname
 
     @fname.setter
     def fname(self, fname): self._fname = fname
+
+    @property
+    def dname(self) -> str: return self._dname
+
+    @dname.setter
+    def dname(self, dname): self._dname = dname
+
+    @property
+    def sname(self) -> str: return self._sname
+
+    @sname.setter
+    def sname(self, sname): self._sname = sname
 
     @property
     def train(self) -> object: return self._train
@@ -57,6 +54,9 @@ class TitanicModel:
     @label.setter
     def label(self, label): self._label = label
 
-    
+
+
+
+
 
 
