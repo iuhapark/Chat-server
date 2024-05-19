@@ -1,4 +1,4 @@
-from app.api.context.data_sets import DataSets
+from app.api.context.datasets import DataSets
 import pandas as pd
 
 class Models:
